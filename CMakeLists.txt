@@ -15,7 +15,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-add_executable(factorial_test tests/factorial_test.cpp src/factorial.cpp)
-add_executable(main main.cpp src/factorial.cpp)
+add_executable(particle_test tests/particle_test.cpp src/particle.cpp)
+add_executable(main main.cpp src/particle.cpp)
 
-target_link_libraries(factorial_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(particle_test PRIVATE Catch2::Catch2WithMain)

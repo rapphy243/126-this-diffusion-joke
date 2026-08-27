@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "src/factorial.hpp"
+#include "src/particle.hpp"
 
 int main() {
-  std::cout << "The factorial of 5 is " << factorial(5) << std::endl;
+  std::cout << "The ending position of a particle after walking 20 steps is " << walk(20) << std::endl;
 }
