@@ -6,19 +6,34 @@
 #include "../src/particle.hpp"
 
 TEST_CASE("benchmarking the walk function") {
-    BENCHMARK("walk(20)") {
-        return walk(20);
-    };
+    for (int i = 0; i < 5; ++i) {
+        BENCHMARK("walk(10) Trial: " + std::to_string(i)) {
+            return walk(10);
+        };
+    }
 
-    BENCHMARK("walk(25)") {
-        return walk(25);
-    };
 
-    BENCHMARK("walk(30)") {
-        return walk(30);
-    };
+    for (int i = 0; i < 5; ++i) {
+        BENCHMARK("walk(20) Trial: " + std::to_string(i + 1)) {
+            return walk(20);
+        };
+    }
 
-    BENCHMARK("walk(35)") {
-        return walk(35);
-    };
+    for (int i = 0; i < 5; ++i) {
+        BENCHMARK("walk(50) Trial: " + std::to_string(i + 1)) {
+            return walk(50);
+        };
+    }
+
+    for (int i = 0; i < 5; ++i) {
+        BENCHMARK("walk(100) Trial: " + std::to_string(i + 1)) {
+            return walk(100);
+        };
+    }
+
+    for (int i = 0; i < 5; ++i) {
+        BENCHMARK("walk(1000) Trial: " + std::to_string(i + 1)) {
+            return walk(1000);
+        };
+    }
 }
