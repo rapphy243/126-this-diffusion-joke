@@ -1,15 +1,16 @@
 #include <random>
 
 int walk(int numTimes, int position) {
-    if (numTimes == 0) {
-        return position;
+    int pos = position;
+    for (int i = 0; i < numTimes; ++i) {
+        if ((std::rand() % 2) == 0) {
+            ++position;
+        }
+        else {
+            --position;
+        }
     }
-    if ((std::rand() % 2) == 0) {
-        return walk(--numTimes, ++position);
-    }
-    else {
-        return walk(--numTimes, --position);
-    }
+    return position;
 }
 
 int walk(int numTimes) {

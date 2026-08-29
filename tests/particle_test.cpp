@@ -6,6 +6,9 @@
 #include "../src/particle.hpp"
 
 TEST_CASE("benchmarking the walk function") {
+    // BENCHMARK("walk(2500000)") {
+    //         return walk(400000000);
+    // };
     for (int i = 0; i < 10; ++i) {
         BENCHMARK("walk(10) Trial: " + std::to_string(i)) {
             return walk(10);
