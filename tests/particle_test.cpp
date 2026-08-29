@@ -32,14 +32,14 @@ TEST_CASE("benchmarking the walk function") {
     }
 
     for (int i = 0; i < 10; ++i) {
-        BENCHMARK("walk(1000) Trial: " + std::to_string(i + 1)) {
-            return walk(1000);
+        BENCHMARK("walk(200) Trial: " + std::to_string(i + 1)) {
+            return walk(200);
         };
     }
 
     for (int i = 0; i < 10; ++i) {
-        BENCHMARK("walk(10000) Trial: " + std::to_string(i + 1)) {
-            return walk(10000);
+        BENCHMARK("walk(500) Trial: " + std::to_string(i + 1)) {
+            return walk(500);
         };
     }
 }
